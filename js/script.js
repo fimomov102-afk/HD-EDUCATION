@@ -1,0 +1,32 @@
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+// Mobil menyu
+menuBtn.onclick = () => {
+    navMenu.classList.toggle("active");
+};
+
+// ===== CONTACT MODAL =====
+
+const modal = document.getElementById("contactModal");
+const heroBtn = document.getElementById("contactBtn");
+const navBtn = document.getElementById("navContactBtn");
+const closeBtn = document.querySelector(".close");
+
+function openModal(e) {
+    e.preventDefault();
+    modal.style.display = "block";
+}
+
+heroBtn.addEventListener("click", openModal);
+navBtn.addEventListener("click", openModal);
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
