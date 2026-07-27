@@ -2,7 +2,8 @@ const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 const overlay = document.getElementById("overlay");
 
-// Mobil menyu
+// ===== Mobil menyu =====
+
 menuBtn.onclick = () => {
 
     navMenu.classList.toggle("active");
@@ -17,23 +18,34 @@ const heroBtn = document.getElementById("contactBtn");
 const navBtn = document.getElementById("navContactBtn");
 const closeBtn = document.querySelector(".close");
 
-function openModal(e) {
+function openModal(e){
+
     e.preventDefault();
     modal.style.display = "block";
+
 }
 
 heroBtn.addEventListener("click", openModal);
 navBtn.addEventListener("click", openModal);
 
+// X tugmasi
 closeBtn.addEventListener("click", () => {
+
     modal.style.display = "none";
+
 });
 
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
+// Modal tashqarisini bosganda yopiladi
+modal.addEventListener("click", (e) => {
+
+    if(e.target === modal){
+
         modal.style.display = "none";
+
     }
+
 });
+
 // Menyudagi link bosilganda menyu yopiladi
 document.querySelectorAll("#navMenu a").forEach(link => {
 
@@ -45,6 +57,7 @@ document.querySelectorAll("#navMenu a").forEach(link => {
     });
 
 });
+
 // Overlay bosilganda menyu yopiladi
 overlay.onclick = () => {
 
