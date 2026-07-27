@@ -30,3 +30,13 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+// Menyudagi link bosilganda menyu yopiladi
+document.querySelectorAll("#navMenu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+
+    });
+
+});
