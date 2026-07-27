@@ -1,9 +1,13 @@
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
+const overlay = document.getElementById("overlay");
 
 // Mobil menyu
 menuBtn.onclick = () => {
+
     navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+
 };
 
 // ===== CONTACT MODAL =====
@@ -36,7 +40,15 @@ document.querySelectorAll("#navMenu a").forEach(link => {
     link.addEventListener("click", () => {
 
         navMenu.classList.remove("active");
+        overlay.classList.remove("active");
 
     });
 
 });
+// Overlay bosilganda menyu yopiladi
+overlay.onclick = () => {
+
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+
+};

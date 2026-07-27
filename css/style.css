@@ -431,7 +431,7 @@ ABOUT
 
     display:flex;
 
-    gap:20px;
+    gap:25px;
 
     margin-top:35px;
 
@@ -447,7 +447,7 @@ ABOUT
 
     text-align:center;
 
-    padding:25px;
+    padding:20px;
 
     border-radius:15px;
 
@@ -552,7 +552,7 @@ COURSES
 
     margin:auto;
 
-    background:#081C45;
+    background: rgba(8,28,69,0.5);
 
     border-radius:50%;
 
@@ -564,7 +564,7 @@ COURSES
 
     font-size:34px;
 
-    color:#FBBF24;
+    color:#081C45;
 
     margin-bottom:25px;
 
@@ -582,7 +582,7 @@ COURSES
 
 .course-card p{
 
-    color:#666;
+    color: #fff;;
 
     line-height:1.8;
 
@@ -1205,9 +1205,38 @@ nav ul li a{
 }
 
 .about-box{
-    flex-direction:column;
+
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+
 }
 
+.box{
+
+    padding:15px;
+    border-radius:15px;
+    min-height:90px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.box h3{
+
+    font-size:28px;
+    margin-bottom:5px;
+
+}
+
+.box span{
+
+    font-size:10px;
+
+}
 /* COURSES */
 
 .course{
@@ -1221,7 +1250,26 @@ nav ul li a{
 }
 
 .course-card{
+
     width:100%;
+    position:relative;
+    overflow:hidden;
+
+    min-height:320px;
+
+    border-radius:20px;
+
+    color:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background-size:cover;
+    background-position:center;
+
 }
 
 /* WHY US */
@@ -1239,27 +1287,190 @@ nav ul li a{
 /* MODAL */
 
 .modal-box{
-    width:95%;
-    padding:25px;
+
+    width:82%;
+    max-width:280px;
+
+    padding:15px 18px;
+
+    border-radius:15px;
+
+}
+
+.modal-logo{
+
+    width:60px;
+
+    margin:0 auto 10px;
+
+}
+
+.modal-box h2{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+.modal-text{
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+    line-height:1.5;
+
+}
+
+.contact-item{
+
+    margin:10px 0;
+
+    font-size:15px;
+
+    line-height:1.5;
+
 }
 
 .modal-buttons{
+
+    display:flex;
+
     flex-direction:column;
+
+    gap:10px;
+
 }
 
 .call-btn,
 .telegram-btn{
+
     width:100%;
-}
+
+    padding:10px 15px;
+
+    font-size:14px;
 
 }
-html{
-    scroll-behavior:smooth;
+
+.close{
+
+    font-size:24px;
+
+    top:10px;
+
+    right:12px;
+
+}
+/* ===========================
+        MENU OVERLAY
+=========================== */
+
+.overlay{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    z-index:998;
+
 }
 
-#home,
-#about,
-#course,
-#why-us{
-    scroll-margin-top:90px;
+.overlay.active{
+
+    display:block;
+
+}
+.math-card{
+    background:
+    linear-gradient(rgba(8,28,69,.65), rgba(8,28,69,.65)),
+    url("../images/math1.jpg") center/cover no-repeat;
+}
+
+.physics-card{
+    background:
+    linear-gradient(rgba(8,28,69,.65), rgba(8,28,69,.65)),
+    url("../images/physics2.jpg") center/cover no-repeat;
+}
+
+.english-card{
+    background:
+    linear-gradient(rgba(8,28,69,.65), rgba(8,28,69,.65)),
+    url("../images/english1.jpg") center/cover no-repeat;
+}
+}
+/* ==========================
+   STUDENTS MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .student-grid{
+
+        display:grid;
+        grid-template-columns:1fr;
+        gap:20px;
+
+    }
+
+    .student-card{
+
+        width:100%;
+        max-width:330px;
+        margin:auto;
+
+    }
+
+    .student-card img{
+
+        width:100%;
+        height:260px;
+        object-fit:cover;
+        border-radius:15px;
+
+    }
+
+    .student-card h3{
+
+        font-size:20px;
+
+    }
+
+    .student-card p{
+
+        font-size:15px;
+
+    }
+
+    .student-card span{
+
+        font-size:16px;
+
+    }
+
+}
+footer{
+    background:#06142f;
+    color:#bfc9d9;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.creator{
+    font-size:13px;
+    color:#8fa5c5;
+    letter-spacing:.5px;
+}
+
+.creator strong{
+    color:#FBBF24;
+    font-weight:600;
 }
