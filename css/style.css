@@ -1050,245 +1050,216 @@ cursor:pointer;
 color:#555;
 
 }
-/*==================================
+/*=================================
         MOBILE RESPONSIVE
-==================================*/
+=================================*/
 
 @media (max-width:768px){
 
-    html,
-    body{
-        overflow-x:hidden;
-    }
+*{
+    box-sizing:border-box;
+}
 
-    *{
-        box-sizing:border-box;
-    }
+html,body{
+    overflow-x:hidden;
+}
 
-    .container{
-        width:92%;
-        margin:auto;
-    }
+.container{
+    width:92%;
+    margin:auto;
+}
 
-    header{
-        height:75px;
-    }
+/* HEADER */
 
-    /* ---------- Logo ---------- */
+header{
+    height:75px;
+}
 
-    .logo img{
-        width:55px;
-    }
+.header{
+    height:75px;
+}
 
-    .logo-text h2{
-        font-size:18px;
-    }
+.logo img{
+    width:50px;
+}
 
-    .logo-text span{
-        font-size:12px;
-    }
+.logo-text h2{
+    font-size:18px;
+}
 
-    /* ---------- Mobile Menu ---------- */
+.logo-text span{
+    font-size:11px;
+}
 
-    .menu-btn{
-        display:block;
-        font-size:28px;
-        color:#fff;
-        cursor:pointer;
-    }
+/* MENU */
 
-    nav{
-        position:fixed;
-        top:75px;
-        right:-100%;
-        width:260px;
-        height:calc(100vh - 75px);
-        background:#081C45;
-        transition:.4s;
-        z-index:999;
-        padding-top:30px;
-    }
+.menu-btn{
+    display:block;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
 
-    nav.active{
-        right:0;
-    }
+nav{
+    position:fixed;
+    top:75px;
+    right:-100%;
+    width:260px;
+    height:calc(100vh - 75px);
+    background:#081C45;
+    transition:.4s;
+    z-index:999;
+}
 
-    nav ul{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
-        list-style:none;
-    }
+nav.active{
+    right:0;
+}
 
-    nav ul li{
-        width:100%;
-        text-align:center;
-    }
+nav ul{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    list-style:none;
+    padding:30px 0;
+    gap:20px;
+}
 
-    nav ul li a{
-        display:block;
-        color:#fff;
-        font-size:18px;
-        padding:15px 0;
-    }
+nav ul li{
+    width:100%;
+    text-align:center;
+}
 
-    /* ---------- Hero ---------- */
+nav ul li a{
+    display:block;
+    padding:15px 0;
+    color:#fff;
+}
 
-    .hero{
-        min-height:100vh;
-        padding-top:110px;
-    }
+/* HERO */
 
-    .hero-container{
-        display:flex;
-        flex-direction:column-reverse;
-        align-items:center;
-        text-align:center;
-        gap:35px;
-    }
+.hero{
+    padding-top:110px;
+}
 
-    .hero-left,
-    .hero-right{
-        width:100%;
-    }
+.hero-container{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+}
 
-    .hero-right img{
-        width:100%;
-        max-width:330px;
-        height:auto;
-        margin:auto;
-        display:block;
-    }
+.hero-left,
+.hero-right{
+    width:100%;
+}
 
-    .hero h1{
-        font-size:34px;
-        line-height:1.3;
-    }
+.hero-right img{
+    width:100%;
+    max-width:320px;
+    margin:auto;
+    display:block;
+}
 
-    .hero p{
-        font-size:17px;
-    }
+.hero h1{
+    font-size:34px;
+}
 
-    .hero-list{
-        display:flex;
-        flex-direction:column;
-        gap:12px;
-    }
+.hero p{
+    font-size:17px;
+}
 
-    .hero-buttons{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-        align-items:center;
-    }
+.hero-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
 
-    .btn1,
-    .btn2{
-        width:240px;
-    }
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+}
 
-    /* ---------- About ---------- */
+.btn1,
+.btn2{
+    width:230px;
+}
 
-    .about-container{
-        flex-direction:column;
-    }
+/* ABOUT */
 
-    .about-content{
-        text-align:center;
-    }
+.about{
+    padding:70px 0;
+}
 
-    .about-box{
-        flex-direction:column;
-    }
+.about-container{
+    flex-direction:column;
+}
 
-    /* ---------- Courses ---------- */
+.about-content{
+    text-align:center;
+}
 
-    .courses{
-        padding:70px 0;
-    }
+.about-content h2{
+    font-size:34px;
+}
 
-    .course-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
+.about-box{
+    flex-direction:column;
+}
 
-    .course-card{
-        width:100%;
-        min-height:260px;
-    }
+/* COURSES */
 
-    /* ---------- Why Us ---------- */
+.course{
+    padding:70px 0;
+}
 
-    .why-grid{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:20px;
-    }
+.course-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+}
 
-    /* ---------- Teacher ---------- */
+.course-card{
+    width:100%;
+}
 
-    .teacher{
-        flex-direction:column;
-        text-align:center;
-    }
+/* WHY US */
 
-    .teacher img{
-        width:260px;
-        height:auto;
-    }
+.why-us{
+    padding:70px 0;
+}
 
-    /* ---------- Students ---------- */
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
 
-    .students-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
+/* MODAL */
 
-    .students-grid img{
-        width:100%;
-        border-radius:15px;
-    }
+.modal-box{
+    width:95%;
+    padding:25px;
+}
 
-    /* ---------- Stats ---------- */
+.modal-buttons{
+    flex-direction:column;
+}
 
-    .stats{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:20px;
-    }
+.call-btn,
+.telegram-btn{
+    width:100%;
+}
 
-    /* ---------- Subject Pages ---------- */
+}
+html{
+    scroll-behavior:smooth;
+}
 
-    .subject-hero h1{
-        font-size:36px;
-    }
-
-    .student-grid{
-        grid-template-columns:1fr;
-    }
-
-    /* ---------- Modal ---------- */
-
-    .modal-box{
-        width:95%;
-        padding:25px;
-    }
-
-    .modal-buttons{
-        flex-direction:column;
-    }
-
-    .call-btn,
-    .telegram-btn{
-        width:100%;
-    }
-
-    /* ---------- Footer ---------- */
-
-    footer{
-        text-align:center;
-        padding:30px 15px;
-    }
-
+#home,
+#about,
+#course,
+#why-us{
+    scroll-margin-top:90px;
 }
