@@ -587,6 +587,32 @@ COURSES
     line-height:1.8;
 
 }
+.math-card{
+    background:
+        linear-gradient(rgba(8,28,69,.65), rgba(8,28,69,.65)),
+        url("../images/math1.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.physics-card{
+    background:
+        linear-gradient(rgba(8,28,69,.65), rgba(8,28,69,.65)),
+        url("../images/physics2.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.english-card{
+    background:
+        linear-gradient(rgba(8,28,69,.65), rgba(8,28,69,.65)),
+        url("../images/english1.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
 /*==========================
 WHY US
 ==========================*/
