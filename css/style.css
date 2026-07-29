@@ -123,13 +123,10 @@ header{
 }
 
 .logo img{
-
     width:60px;
-
     height:60px;
-
     border-radius:50%;
-
+    object-fit:cover;
 }
 
 .logo-text h2{
@@ -165,6 +162,21 @@ nav ul li a{
     font-weight:500;
 
     transition:.3s;
+
+}
+nav ul li i{
+
+    width:22px;
+
+    font-size:20px;
+
+    color:#FBBF24;
+
+}
+
+nav ul li span{
+
+    font-weight:600;
 
 }
 
@@ -235,17 +247,19 @@ HERO
 
     display:inline-block;
 
-    background:#0f2c6b;
+    background:transparent;
 
-    color:#FFD54F;
+    color:#FBBF24;
 
-    padding:10px 20px;
+    padding:0;
 
-    border-radius:30px;
+    border-radius:0;
 
     margin-bottom:20px;
 
-    font-weight:600;
+    font-weight:700;
+
+    letter-spacing:1px;
 
 }
 
@@ -690,27 +704,28 @@ MATEMATIKA PAGE
 
 .subject-hero{
 
-padding-top:140px;
-padding-bottom:70px;
-background:#081C45;
-text-align:center;
-color:white;
+    padding-top:110px;
+    padding-bottom:40px;
+
+    background:#081C45;
+    text-align:center;
+    color:white;
 
 }
 
 .subject-hero h1{
 
-font-size:55px;
-margin-bottom:20px;
+    font-size:48px;
+    margin:15px 0;
 
 }
 
 .subject-hero p{
 
-max-width:700px;
-margin:auto;
-font-size:18px;
-color:#ddd;
+    max-width:600px;
+    margin:auto;
+    font-size:17px;
+    line-height:1.6;
 
 }
 
@@ -1107,6 +1122,9 @@ header{
 
 .logo img{
     width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
 .logo-text h2{
@@ -1128,13 +1146,21 @@ header{
 
 nav{
     position:fixed;
-    top:75px;
+    top:75px;              /* Header ostidan boshlanadi */
     right:-100%;
-    width:260px;
+    width:280px;
     height:calc(100vh - 75px);
-    background:#081C45;
+
+    background:linear-gradient(180deg,#081C45,#0E2D73);
+
     transition:.4s;
     z-index:999;
+
+    border-radius:20px 0 0 20px;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.35);
+
+    padding-top:20px;      /* Faqat ozgina joy */
 }
 
 nav.active{
@@ -1144,21 +1170,40 @@ nav.active{
 nav ul{
     display:flex;
     flex-direction:column;
-    align-items:center;
-    list-style:none;
-    padding:30px 0;
-    gap:20px;
+    gap:12px;
+    padding:10px 20px;
 }
 
 nav ul li{
     width:100%;
-    text-align:center;
 }
 
 nav ul li a{
-    display:block;
-    padding:15px 0;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:16px 18px;
+
     color:#fff;
+
+    font-size:17px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    background:rgba(255,255,255,.08);
+
+    color:#FBBF24;
+
+    transform:translateX(8px);
+
 }
 
 /* HERO */
@@ -1381,13 +1426,30 @@ nav ul li a{
 }
 
 .close{
+    position:absolute;
+    top:15px;
+    right:18px;
 
-    font-size:24px;
+    width:40px;
+    height:40px;
 
-    top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    right:12px;
+    font-size:34px;
+    font-weight:700;
+    color:#555;
 
+    cursor:pointer;
+    border-radius:50%;
+
+    transition:.3s;
+}
+
+.close:hover{
+    background:#f2f2f2;
+    color:#081C45;
 }
 /* ===========================
         MENU OVERLAY
@@ -1499,4 +1561,34 @@ footer{
 .creator strong{
     color:#FBBF24;
     font-weight:600;
+}
+/* ==========================
+   SUBJECT HERO BACKGROUNDS
+========================== */
+
+.math-hero{
+    background:
+        linear-gradient(rgba(8,28,69,.75), rgba(8,28,69,.75)),
+        url("../images/math-hero.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.physics-hero{
+    background:
+        linear-gradient(rgba(8,28,69,.75), rgba(8,28,69,.75)),
+        url("../images/physics-hero.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.english-hero{
+    background:
+        linear-gradient(rgba(8,28,69,.75), rgba(8,28,69,.75)),
+        url("../images/english-hero.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
